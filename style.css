@@ -277,3 +277,31 @@ body{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+@media print {
+  @page {
+    size: Letter portrait;
+    margin: 0.5cm;
+  }
+  body {
+    padding-top: 6rem!important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    page-break-after: avoid;
+  }
+  .m-0,
+  .m-0 *,
+  .dont-print,
+  .dont-print * {
+    display: none!important;
+  }
+  section.resume-section {
+    margin-top: -10rem!important;
+    padding-top: 0rem!important;
+    padding-bottom: 0rem!important;
+    page-break-after: avoid;
+  }
+}
